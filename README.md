@@ -41,7 +41,7 @@ A modern, full-featured Todo application built with React (Frontend) and FastAPI
 - **FastAPI** - High-performance Python web framework
 - **SQLAlchemy** - Database ORM and management
 - **JWT Authentication** - Secure token-based auth
-- **PostgreSQL/SQLite** - Database storage
+- **MySQL/SQLite** - Database storage
 - **CORS Support** - Cross-origin resource sharing
 - **Pydantic** - Data validation and serialization
 
@@ -51,7 +51,7 @@ A modern, full-featured Todo application built with React (Frontend) and FastAPI
 - **Node.js** (v16 or higher)
 - **Python** (v3.8 or higher)
 - **npm** or **yarn**
-- **PostgreSQL** (optional, SQLite works for development)
+- **MySQL** (optional, SQLite works for development)
 
 ### Backend Setup
 
@@ -227,9 +227,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+**Radhika**
+- GitHub: [@RadhikaCongreja](https://github.com/RadhikaCongreja)
+- Email: radhikacongreja@gmail.com
 
 ## 🙏 Acknowledgments
 

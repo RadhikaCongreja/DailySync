@@ -7,11 +7,19 @@ from . import models, schemas, crud, auth
 from .auth import create_access_token, get_current_user
 from .database import get_db
 from fastapi import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
 
 # Create all database tables
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+@app.get("/")
+def serve_frontend():
+    return FileResponse("static/index.html")
 
 # CORS Middleware
 app.add_middleware(
@@ -142,4 +150,5 @@ def update_todo(
         raise HTTPException(status_code=404, detail="Todo not found or not authorized")
     
     print(f"API: Returning: {updated}")
+
     return updated

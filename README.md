@@ -1,23 +1,23 @@
-# 📝 Todo App - Full Stack Application
+# 🔄 DailySync - Full Stack Task Management Application
 
-A modern, full-featured Todo application built with React (Frontend) and FastAPI (Backend), featuring user authentication, real-time filtering, and persistent filter state across page refreshes.
+A modern, full-featured task management application built with React (Frontend) and FastAPI (Backend), featuring user authentication, real-time filtering, and persistent filter state across page refreshes. Stay synchronized with your daily goals and boost your productivity.
 
 ## ✨ Features
 
 ### 🔐 Authentication
 - **User Registration** - Create new accounts with email/password
 - **Secure Login** - JWT-based authentication system
-- **Protected Routes** - Authenticated access to todo management
+- **Protected Routes** - Authenticated access to task management
 - **Session Management** - Automatic token handling
 
-### 📋 Todo Management
-- **Create Todos** - Add new tasks with completion status
-- **Edit Todos** - Update task titles and completion status
+### 📋 Task Management
+- **Create Tasks** - Add new daily tasks with completion status
+- **Edit Tasks** - Update task titles and completion status
 - **Real-time Updates** - Instant UI updates with API synchronization
 - **Modal Interface** - Clean, user-friendly editing experience
 
 ### 🔍 Advanced Filtering
-- **Filter by Status** - View All, Completed, or Incomplete todos
+- **Filter by Status** - View All, Completed, or Incomplete tasks
 - **URL Persistence** - Filters remain active after page refresh
 - **Real-time Filtering** - Instant results as you switch filters
 - **Filter State Management** - Seamless user experience
@@ -58,7 +58,7 @@ A modern, full-featured Todo application built with React (Frontend) and FastAPI
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd todo-app
+   cd DailySync
    ```
 
 2. **Set up Python virtual environment**
@@ -81,7 +81,7 @@ A modern, full-featured Todo application built with React (Frontend) and FastAPI
 4. **Configure database** (optional for PostgreSQL)
    ```bash
    # Create .env file
-   DATABASE_URL=postgresql://username:password@localhost/todoapp_db
+   DATABASE_URL=postgresql://username:password@localhost/dailysync_db
    SECRET_KEY=your-secret-key-here
    ```
 
@@ -118,12 +118,12 @@ A modern, full-featured Todo application built with React (Frontend) and FastAPI
    yarn start
    ```
 
-   The app will be available at `http://localhost:5173` (or your configured port)
+   The app will be available at https://dailysync-ndd8.vercel.app/
 
 ## 📁 Project Structure
 
 ```
-todo-app/
+DailySync/
 ├── backend/
 │   ├── main.py              # FastAPI application entry point
 │   ├── models.py            # Database models
@@ -135,21 +135,21 @@ todo-app/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── TodoApp.jsx      # Main todo application
-│   │   │   └── TodoModal.jsx    # Todo edit/create modal
+│   │   │   ├── DailySyncApp.jsx     # Main task management application
+│   │   │   └── TaskModal.jsx        # Task edit/create modal
 │   │   ├── context/
-│   │   │   └── AuthContext.jsx  # Authentication context
+│   │   │   └── AuthContext.jsx      # Authentication context
 │   │   ├── pages/
-│   │   │   ├── Home.jsx         # Landing page
-│   │   │   ├── SignIn.jsx       # Login page
-│   │   │   ├── SignUp.jsx       # Registration page
-│   │   │   └── ProtectedRoute.jsx # Route protection
+│   │   │   ├── Home.jsx             # Landing page
+│   │   │   ├── SignIn.jsx           # Login page
+│   │   │   ├── SignUp.jsx           # Registration page
+│   │   │   └── ProtectedRoute.jsx   # Route protection
 │   │   ├── styles/
-│   │   │   ├── auth.css         # Authentication styles
-│   │   │   └── main.css         # Main application styles
-│   │   └── App.js               # Main React application
-│   └── package.json             # Node.js dependencies
-└── README.md                    # This file
+│   │   │   ├── auth.css             # Authentication styles
+│   │   │   └── main.css             # Main application styles
+│   │   └── App.js                   # Main React application
+│   └── package.json                 # Node.js dependencies
+└── README.md                        # This file
 ```
 
 ## 🔧 API Endpoints
@@ -159,10 +159,10 @@ todo-app/
 - `POST /token` - User login (get JWT token)
 - `GET /verify-token` - Verify JWT token
 
-### Todos
-- `GET /todos` - Get all user todos
-- `POST /todos` - Create new todo
-- `PATCH /todos/{todo_id}` - Update todo
+### Tasks
+- `GET /todos` - Get all user tasks
+- `POST /todos` - Create new task
+- `PATCH /todos/{todo_id}` - Update task
 
 ## 🎯 Key Features Implementation
 
@@ -191,9 +191,9 @@ The app uses React Router's `useSearchParams` to maintain filter state in the UR
    - Login with credentials
    - Verify protected route access
 
-2. **Todo Management Testing**
-   - Create new todos
-   - Edit todo titles and completion status
+2. **Task Management Testing**
+   - Create new daily tasks
+   - Edit task titles and completion status
    - Verify API synchronization
 
 3. **Filter Persistence Testing**
@@ -203,15 +203,27 @@ The app uses React Router's `useSearchParams` to maintain filter state in the UR
 
 ## 🚧 Future Enhancements
 
-- [ ] Todo categories/tags
-- [ ] Due dates and reminders
-- [ ] Drag-and-drop reordering
+- [ ] Daily/Weekly/Monthly task views
+- [ ] Task categories and priority levels
+- [ ] Due dates and smart reminders
+- [ ] Drag-and-drop task reordering
 - [ ] Dark/light theme toggle
 - [ ] Bulk operations (delete/complete multiple)
-- [ ] Search functionality
-- [ ] Todo sharing between users
+- [ ] Advanced search and filtering
+- [ ] Task analytics and productivity insights
+- [ ] Team collaboration features
 - [ ] Mobile app version
-- [ ] Offline support with service workers
+- [ ] Offline sync capabilities
+- [ ] Daily/Weekly progress reports
+- [ ] Integration with calendar apps
+
+## 🌟 Why DailySync?
+
+DailySync is more than just a task manager - it's your daily productivity companion that helps you:
+- **Stay Organized** - Keep all your daily tasks in one synchronized place
+- **Maintain Focus** - Filter and prioritize what matters most
+- **Track Progress** - Visualize your daily accomplishments
+- **Build Habits** - Develop consistent daily routines
 
 ## 🤝 Contributing
 
@@ -221,9 +233,7 @@ The app uses React Router's `useSearchParams` to maintain filter state in the UR
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
@@ -236,6 +246,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - React team for the amazing framework
 - FastAPI team for the high-performance backend framework
 - Open source community for inspiration and tools
+- All productivity enthusiasts who inspired this project
 
 ---
 
@@ -246,4 +257,17 @@ If you have any questions or run into issues, please:
 2. Create a new issue with detailed information
 3. Reach out via email
 
-**Happy Todo Managing! 🎉**
+**Stay Synced, Stay Productive! 🎉**
+
+---
+
+## 📊 Project Stats
+<img width="1354" height="658" alt="image" src="https://github.com/user-attachments/assets/09290fd9-3bf6-48c1-9608-129a2558aacd" />
+
+
+![GitHub last commit](https://img.shields.io/github/last-commit/RadhikaCongreja/DailySync)
+![GitHub stars](https://img.shields.io/github/stars/RadhikaCongreja/DailySync)
+![GitHub forks](https://img.shields.io/github/forks/RadhikaCongreja/DailySync)
+![GitHub issues](https://img.shields.io/github/issues/RadhikaCongreja/DailySync)
+
+*Built with ❤️ for daily productivity enthusiasts*
